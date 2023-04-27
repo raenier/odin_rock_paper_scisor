@@ -4,10 +4,49 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="index.js"></script>
+  <script src="index.js" defer></script>
+  <link rel="stylesheet" href="style.css" >
   <title>Document</title>
 </head>
 
 <body>
+
+<main class="flex flex-column align-center gap">
+  <h1 class="rps-title"> THE ROCK PAPER SCISSORS! </h1>
+  <div class="rps-rd">
+    <button class="start-btn">
+      <img src="images/play.svg">
+      <div>PLAY NOW!</div>
+    </button>
+  </div>
+  
+  <div class="choices flex justify-center hide">
+    <div class="rock">
+      <img src="images/rock.svg">
+    </div>
+    <div class="paper">
+      <img src="images/paper.svg">
+    </div>
+    <div class="scissor">
+      <img src="images/scissor.svg">
+    </div>
+  </div>
+
+  <div class="rps-result hide">
+    <div class="winner-announcement">MAY THE ODDS BE IN YOUR FAVOR! RACE TO 5</div>
+    <div>
+      <ul class="score">
+        <li class="user-score">USER: <strong>0</strong></li>
+        <li class="computer-score">AI: <strong>0</strong></li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<div class="results flex flex-column align-center gap hide">
+  <img src="images/lost.svg">
+  <div class="rs-title"> YOU LOST! NOW WATCH THE WORLD BURN</div>
+  <button onClick="window.location.reload();">NEW GAME</button>
+</div>
 </body>
 </html>
